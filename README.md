@@ -42,6 +42,6 @@ The flow of the sensor can be described as following.
 7. 
 We have depicted this flow in the following figure.
 
-![volume control][images/volume_control.png]
+![volume control](images/volume_control.png)
 
 # Code
