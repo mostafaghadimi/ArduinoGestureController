@@ -45,3 +45,37 @@ We have depicted this flow in the following figure.
 ![volume control](images/volume_control.png)
 
 # Code
+
+In the distinct phases, we have implemented the code for each of the modules.
+
+## PAJ7620U2
+
+First, we define gesture timings and import header files.
+
+![paj header](images/header.png)
+
+-- description
+
+![paj setup](images/setup.png)
+
+-- description
+
+![paj setup](images/loop.png)
+
+## ESP8266
+
+TODO
+
+## Web Socket Client
+
+After connecting the modules in the previous sections, we need to connect them to a client in order to control a media player. We used [howler.js](https://github.com/goldfire/howler.js) as the base javascript library to create a music player.
+
+![howler music player](images/player.png)
+
+The player is controlled by events. We create a websocket on the player side in order to translate Arduino transferred data into music player actions.
+
+![socket constants](images/constants.png)
+
+![socket cases](images/socket_client_events.png)
+
+Each case converts the input from the socket server into an action.

@@ -50,16 +50,46 @@
     <script src="./siriwave.js"></script>
     <script src="./player.js"></script>
     <script>
+      const INCREASE_VOLUME = 'INCREASE_VOLUME';
+      const DECREASE_VOLUME = 'DECREASE_VOLUME';
+      const TOGGLE_PAUSE = 'TOGGLE_PAUSE';
+      const PREVIOUS = 'PREVIOUS';
+      const NEXT = 'NEXT';
+
       const socket = new WebSocket('ws://localhost:15555');
 
-      socket.addEventListener('open', function (event) {
-        console.log('hey');
-        socket.send('Hello Server!');
-      });
+      let volume = 1;
+      let play = false;
 
-      // Listen for messages
       socket.addEventListener('message', function (event) {
-        console.log('Message from server ', event.data);
+        const message = event.data;
+        switch (message) {
+          case INCREASE_VOLUME: {
+            volume = Math.min(volume + 0.1, 1);
+            player.volume(volume);
+            break;
+          }
+          case DECREASE_VOLUME: {
+            volume = Math.max(volume 0 0.1, 0);
+            player.volume(volume);
+            break;
+          }
+          case TOGGLE_PAUSE: {
+            play = !play;
+            if (play) {
+              player.play();
+            }
+            else {
+              player.pause();
+            }
+          }
+          case PREVIOUS: {
+            player.skip('prev');
+          }
+          case NEXT: {
+            player.skip('next');
+          }
+        }
       });
     </script>
   </body>
