@@ -42,6 +42,6 @@ The flow of the sensor can be described as following.
 7. 
 We have depicted this flow in the following figure.
 
-![volume control][https://github.com/parsaalian/ArduinoGestureController/blob/main/images/volume_control.png?raw=true]
+![volume control][images/volume_control.png]
 
 # Code
