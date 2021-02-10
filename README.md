@@ -61,6 +61,18 @@ We have depicted this flow in the following figure.
 
 ![volume control](images/volume_control.png)
 
+# How to use
+
+1. The jumper wires should be connect the boards (Node-MCU and PAJ7620) like the following scheme:
+
+| paj7620       | nodemcu       |
+| ------------- |:-------------:|
+| VCC           | 3.3v          |
+| GND           | GND           |
+| SCL           | D1            |
+| SDA           | D2            |
+
+
 # Code
 
 In the distinct phases, we have implemented the code for each of the modules.
