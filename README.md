@@ -72,6 +72,19 @@ We have depicted this flow in the following figure.
 | SCL           | D1            |
 | SDA           | D2            |
 
+2. Node-MCU tries to connect a WiFi. Change the following parameters to your SSID and Wifi password in `gesture.ino` file.
+
+```
+WiFi.begin("<Your-SSID>", "<Your-WiFi-Password>");
+```
+
+
+3. Execute python code with running the following command in terminal:
+```
+python3 socket.py
+```
+**Note:** Make sure you have `python` installed on your computer.
+
 
 # Code
 
