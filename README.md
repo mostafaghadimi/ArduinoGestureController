@@ -3,7 +3,9 @@
 
 # Usages
 
-Since it's a really simple implementation of media control using gesture detector, it has wide variety of usages such as car manufacturing. It can also implemented for different approaches not only controling media.
+Since it's a really simple implementation of media control using gesture detector, it has wide variety of usages such as car manufacturing. It can also implemented for different approaches not only controling media. 
+
+- BMW Gesture Control is an innovative feature that is available in select BMW models and will allow drivers to use simple hand gestures to perform various actions in the vehicle with 3D technology – turn the volume up or down, accept or decline a phone call, change the rearview camera angle or select navigation on the BMW iDrive infotainment system.
 
 
 # Physical Modules
