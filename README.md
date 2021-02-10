@@ -8,6 +8,23 @@ The contributor names (alphabetical order):
 - [Parsa Alian](https://github.com/parsaalian)
 
 
+# Table of Content
+
+- [Gesture Media Controller](#gesture-media-controller)
+- [Table of Content](#table-of-content)
+- [Usages](#usages)
+- [Physical Modules](#physical-modules)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [How to use](#how-to-use)
+- [Code](#code)
+  - [PAJ7620U2](#paj7620u2)
+  - [ESP8266](#esp8266)
+  - [Web Socket Client](#web-socket-client)
+- [Challenges](#challenges)
+  - [DEMO VIDEO](#demo-video)
+
+
 # Usages
 
 Since it's a really simple implementation of media control using gesture detector, it has wide variety of usages such as car manufacturing. It can also implemented for different approaches not only controling media. 
@@ -101,11 +118,18 @@ We have depicted this flow in the following figure.
 WiFi.begin("<Your-SSID>", "<Your-WiFi-Password>");
 ```
 
+1. Find your IP and assign it to `host` variable in `gesture.ino`:
 
-3. Execute python code with running the following command in terminal:
+```
+const char * host = "<YOUR_IP>";
+```
+
+
+4. Execute python code with running the following command in terminal:
 ```
 python3 socket.py
 ```
+
 **Note:** Make sure you have `python` installed on your computer.
 
 
@@ -161,3 +185,8 @@ It is valuable to see the following issues:
 > ESP8266 with Arduino UNO error: Timed out waiting for packet header
 This error was resolved after changing the cable! You can see more details [here](https://github.com/esp8266/Arduino/issues/3551).
 
+
+## DEMO VIDEO
+```
+TODO://
+```
