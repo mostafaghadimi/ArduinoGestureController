@@ -1,5 +1,12 @@
 # Gesture Media Controller
 
+A project accomplished by Computer Engineering students of Sharif University of Techology.
+
+The contributor names (alphabetical order):
+- [Amir Hasan Fathi](https://github.com/ahfathi)
+- [Mostafa Ghadimi](https://github.com/mostafaghadimi)
+- [Parsa Alian](https://github.com/parsaalian)
+
 
 # Usages
 
@@ -10,18 +17,18 @@ Since it's a really simple implementation of media control using gesture detecto
 
 # Physical Modules
 
-NodeMCU, Jumper Wires, PAJ7620
+- **NodeMCU**
 
-# Challenges
-
-
-TODO:// ADD STACKOVERFLOW ISSUE
-https://arduino.stackexchange.com/questions/81294/cant-connect-paj7620-gesture-detector-module-to-nodemcu/81302#81302
-
-TODO:// ADD ESP8266-01 ISSUE
+![nodemcu](images/nodemcu.jpg)
+- **Jumper Wires** 
 
 
-TODO:// ADD NODEMCU ISSUE
+![jumper wires](images/jumper.jpg)
+- **PAJ7620**
+
+
+![paj7620](images/paj7620.jpg)
+
 
 # Introduction
 
@@ -48,6 +55,19 @@ As we have described in our preliminary report, we used the following modules to
 | ESP8266   | WiFi module        |
 | Cable   | Connect Arduino board to the computer        |
 
+
+![circuit](images/circuit.jpg)
+
+```
+#COLOR MAPPING
+RED: VCC - 3.3v
+BLACK: GND
+ORANGE: SCL - D1
+GREEN: SDA - D2
+```
+
+**Note:** If your module doesn't work properly, see the *Challenges* section.
+
 The flow of the sensor can be described as following.
 
 1. The person moves his hand in front of the gesture sensor.
@@ -71,6 +91,9 @@ We have depicted this flow in the following figure.
 | GND           | GND           |
 | SCL           | D1            |
 | SDA           | D2            |
+
+
+
 
 2. Node-MCU tries to connect a WiFi. Change the following parameters to your SSID and Wifi password in `gesture.ino` file.
 
@@ -121,3 +144,20 @@ The player is controlled by events. We create a websocket on the player side in 
 ![socket cases](images/socket_client_events.png)
 
 Each case converts the input from the socket server into an action.
+
+
+# Challenges
+
+At first, we were trying to assemble the circuit using `Arduino Uno` micro-controller, `PAJ7620` gesture detector and `ESP8266-01` wifi module. We have found that the `ESP8266-01` module is very sensitive to voltage, requires some voltage regulator modules and have complex unresolved issues which we've faced to them after trying to connect it and found too many links that none of them work properly for us. Therefore we have decided to use `NodeMCU` micro-controller instead of `Arduino Uno` and `ESP8266`. Because it has a built-in wifi module on it. 
+
+It is valuable to see the following issues:
+- [Connecting PAJ7620 to NodeMCU](https://arduino.stackexchange.com/questions/81294/cant-connect-paj7620-gesture-detector-module-to-nodemcu/81302#81302)
+- [Port is disabled in Arduino IDE](https://github.com/esp8266/Arduino/issues/3551): In short, just try different cables!
+
+> "The A4 and A5 on the UNO are where the ATMega328P's I2C bus signals happen to be. Earlier versions of the Arduino UNO and related boards didn't have dedicated SDA and SCL headers as they do now. On those UNO that have SDA and SCL pins on the upper digital header, they are the same exact signal as those found on A4 and A5."
+
+
+
+> ESP8266 with Arduino UNO error: Timed out waiting for packet header
+This error was resolved after changing the cable! You can see more details [here](https://github.com/esp8266/Arduino/issues/3551).
+
