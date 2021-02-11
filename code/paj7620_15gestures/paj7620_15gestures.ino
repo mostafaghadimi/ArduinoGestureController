@@ -34,7 +34,7 @@ void setup()
   // WiFi 
   Serial.begin(115200);
 
-  WiFi.begin(wifiname, password);
+  WiFi.begin("Hooshang", "eshalkhook97!12");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.println("...");
@@ -55,7 +55,7 @@ void connectWifi(char * gesture){
 
     
     Serial.println("Connected to server successful!");
-    client.print(gesture);
+    client.print(gesture);  
     Serial.println("Disconnecting...");
     client.stop();
 }

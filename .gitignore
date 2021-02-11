@@ -1,3 +1,5 @@
 .DS_Store/
 ./resources
 ./code/paj7620_15gestures
+__pycache__/
+

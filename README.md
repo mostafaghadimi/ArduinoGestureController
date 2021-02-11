@@ -20,7 +20,7 @@ The contributor names (alphabetical order):
 - [Code](#code)
   - [PAJ7620U2](#paj7620u2)
   - [ESP8266](#esp8266)
-  - [Web Socket Client](#web-socket-client)
+  - [Web  Client](#web-socket-client)
 - [Challenges](#challenges)
   - [DEMO VIDEO](#demo-video)
 
@@ -127,7 +127,7 @@ const char * host = "<YOUR_IP>";
 
 4. Execute python code with running the following command in terminal:
 ```
-python3 socket.py
+python3 socket_server.py
 ```
 
 **Note:** Make sure you have `python` installed on your computer.
