@@ -10,8 +10,6 @@ The contributor names (alphabetical order):
 
 # Table of Content
 
-- [Gesture Media Controller](#gesture-media-controller)
-- [Table of Content](#table-of-content)
 - [Usages](#usages)
 - [Physical Modules](#physical-modules)
 - [Introduction](#introduction)
